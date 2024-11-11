@@ -1,0 +1,9 @@
+DECLARE 
+score NUMBER := 89; 
+BEGIN 
+IF score >= 75 THEN 
+DBMS_OUTPUT.PUT_LINE('Congratulations, you passed!'); 
+ELSE 
+DBMS_OUTPUT.PUT_LINE('You did not pass. Keep trying!'); 
+END IF; 
+END;

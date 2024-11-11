@@ -1,0 +1,8 @@
+DECLARE 
+daily_expenses NUMBER := 50; 
+days NUMBER := 30; 
+total_expense NUMBER; 
+BEGIN 
+total_expense:= daily_expenses * days; 
+DBMS_OUTPUT.PUT_LINE('After ' || days || ' days, you have expense a total of $' || total_expense || '.'); 
+END;

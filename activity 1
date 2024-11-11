@@ -1,0 +1,7 @@
+DECLARE 
+sports_name VARCHAR2(50) := 'Basketball'; 
+team_name VARCHAR2(50) :='Vipers'; 
+number_of_players NUMBER := 15; 
+BEGIN 
+DBMS_OUTPUT.PUT_LINE ('Sports name:'||sports_name||', Team:' ||team_name||', Number of player'||number_of_players); 
+END;

@@ -1,0 +1,30 @@
+CREATE TABLE players( 
+    players_name VARCHAR2(50), 
+    players_id NUMBER, 
+    sports_id NUMBER  
+)
+CREATE TABLE team( 
+    team_name VARCHAR2(50),  
+    sports_name VARCHAR2(50),  
+    sports_id NUMBER  
+)
+INSERT INTO players(players_name, players_id, sports_id) 
+VALUES ('Victor',25,1)
+INSERT INTO players(players_name, players_id, sports_id ) 
+VALUES ('Dexter ', 37,2)
+INSERT INTO players(players_name, players_id,sports_id ) 
+VALUES ('David ', 13,3)
+
+INSERT INTO team (team_name , sports_name , sports_id) 
+VALUES ('Bardagul ','basketball ',1)
+INSERT INTO team (team_name, sports_name, sports_id ) 
+VALUES ('Kupal ','sepak tkraw ',2)
+INSERT INTO team (team_name, sports_name ,sports_id ) 
+VALUES ('Bossing ','volleyball ' ,3)
+
+SELECT players .players_name 
+ 
+FROM players  
+ 
+JOIN team ON players.sports_id = team.sports_id
+

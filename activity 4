@@ -1,0 +1,17 @@
+CREATE TABLE songs ( 
+    song_number NUMBER, 
+    title VARCHAR2(50), 
+    Artist VARCHAR2(50) 
+    )
+INSERT INTO songs (song_number, title, artist)  
+VALUES (1, 'blue', 'yung kai')
+INSERT INTO songs (song_number, title, artist)  
+VALUES (2, 'namumula', 'maki')
+INSERT INTO songs (song_number, title, artist)  
+VALUES (3, 'Die with a smile ', 'Bruno Mars')
+
+UPDATE songs 
+SET song_number = 4 
+WHERE title = 'blue' 
+DELETE songs 
+WHERE title = 'namumula' 

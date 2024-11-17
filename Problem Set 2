@@ -1,0 +1,33 @@
+Problem Set 2: Custom Modifications Using ALTER Command
+
+1.Add a New Column to Each Table: 
+
+in teacher table add 'email'to teacher and 'credit hours' to subject
+
+
+
+ALTER TABLE teacher 
+
+ADD email VARCHAR2(50);
+
+
+
+ALTER TABLE subject 
+
+ADD credit hours NUMBER;
+
+
+
+2.Apply a Unique Constraint: 
+
+
+
+ALTER TABLE teacher
+
+ADD CONSTRAINT unique_teacher_name
+
+UNIQUE (teacher_name);
+
+
+
+REFLECTION:A unique constraint ensures no duplicate values, like a Player ID, which keeps data accurate and easy to manage.

@@ -1,0 +1,76 @@
+Problem Set 5: Challenge-Personalized Database Design Scenario with Unique Constraints:
+
+
+
+Here's a personalized database design scenario based on your interest in managing a collection of songs.
+
+
+
+1. Define Your Unique Scenario:
+
+Imagine you are creating a database to  organise your favorite sports and your favourite players. 
+
+
+
+- sports : this table stores information about different sports. 
+
+- player: this table stores information about different players. 
+
+
+
+This database structure allows you to organize your favorite sports and players effectively. 
+
+
+
+2. Apply Unique Constraints:
+
+To ensure data integrity and accuracy, we can apply unique constraints to the following fields:
+
+
+
+- sports table: Ensure that each sports has a unique sports_id.
+
+- player table : Ensure that each player has a unique player_name 
+
+
+
+Here's an SQL example to define the tables:
+
+
+
+
+
+CREATE TABLE sports (
+    sport_id NUMBER PRIMARY KEY, 
+    sport_name VARCHAR2 (50)UNIQUE
+    );
+
+
+
+CREATE TABLE player (
+    player_id NUMBER , 
+    player_name VARCHAR2 (50),
+    age NUMBER UNIQUE 
+    ); 
+
+
+
+
+
+ 3. Alter the Structure:
+
+Suppose we want to add a position . We can use the 'ALTER' command to add this new column.
+
+
+
+
+
+ALTER TABLE player 
+
+ADD COLUMN position VARCHAR2 (50) 
+
+
+
+
+
+Reflection:Unique constraints prevent duplicates, and foreign keys ensure consistent relationships, making data accurate and easier to manage.

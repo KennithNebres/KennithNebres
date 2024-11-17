@@ -1,0 +1,63 @@
+Problem Set 4: Batch Deletes and Cascade Constraints in Your Unique Scenario:
+
+
+
+ Scenario:teacher Database
+
+
+
+Imagine you have a database for a subject center, and you need to delete records for subject that meet a certain condition (e.g., subject_id). Additionally, you will drop a table with foreign key dependencies, using 'CASCADE CONSTRAINTS'.
+
+
+
+
+
+
+
+1. Delete Records Based on a Condition
+
+
+
+In this step, you'll delete subject older than a certain subject_id, such as  high, from the 'subject' table.
+
+
+
+
+
+DELETE FROM subjects
+
+WHERE subject_id > 1;
+
+
+
+
+
+This command removes all records of teacher that has 2 id. Adjust the condition as needed for your scenario.
+
+
+
+
+
+2. Drop a Table with Cascade Constraints
+
+
+
+Let's say the 'subjects' table has dependencies, such as a 'subject_name' table that references 'subjects' through a foreign key relationship. When you delete the 'subjects' table, you must ensure that all related records in 'subject_name' are also removed to maintain database integrity.
+
+
+
+
+
+DROP TABLE subjects CASCADE CONSTRAINTS;
+
+
+
+
+
+Using 'CASCADE CONSTRAINTS' ensures that all dependent records in other tables, like 'subject_name', are automatically deleted when the 'subjects' table is dropped.
+
+
+
+
+
+Reflection:CASCADE CONSTRAINTS automatically deletes related records when a table is deleted, ensuring data stays consistent and preventing errors.

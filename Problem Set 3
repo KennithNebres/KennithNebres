@@ -1,0 +1,41 @@
+Problem Set 3: Personalized Duplicate Testing and Error Handling
+
+1.Create and Test Duplicates:
+
+
+
+CREATE TABLE student (student_id NUMBER PRIMARY KEY ,student_name VARCHAR2(50) UNIQUE,age NUMBER );
+
+
+
+
+
+INSERT INTO student (student_id,student_name,age)
+
+VALUES (1,'john carl',21);
+
+INSERT INTO student (student_id,student_name,age)
+
+VALUES (2,'joshua',23);
+
+
+
+2.Observe and Document Errors
+
+
+
+INSERT INTO student (student_id,student_name,age)
+
+VALUES (1,'john carl',21);
+
+
+
+ORA-00001: unique constraint (SQL_DYOPXQUWIUSRCTZBLHOHBZTXN.SYS_C00173202699) violated ORA-06512: at "SYS.DBMS_SQL", line 1721
+
+
+
+
+
+REFLECTION:The error ORA-00001: unique constraint violated means the database is blocking you from adding a duplicate value in a column that must have unique entries.
+A unique constraint ensures all values in a column are different. 
+The database uses an index to track the values in the column. 

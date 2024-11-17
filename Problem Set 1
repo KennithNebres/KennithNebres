@@ -1,0 +1,73 @@
+Problem Set 1: Personalized Table Creation and Relationship Setup 
+
+1.Define Your Entities:
+
+*teacher table:
+
+teacher_id NUMBER (primary key),
+
+teacher_name VARCHAR2(50), 
+
+department VARCHAR2(50)  
+
+
+
+*subject table:
+
+subject_id NUMBER , 
+
+subject_name VARCHAR2(50), 
+
+teacher_id NUMBER 
+
+
+
+2.Enforce a Unique Constraint:  
+
+Unique Constraint are applied on teacher_name in teacher table and subject_name in subject table
+
+
+
+3.Example Output:
+
+CREATE TABLE teacher (teacher_id NUMBER, teacher_name VARCHAR2(50), department VARCHAR2(50)  
+
+) 
+
+
+
+INSERT INTO teacher (teacher_id, teacher_name, department)  
+
+VALUES (1,'Maria', 'mathematics')
+
+INSERT INTO teacher (teacher_id, teacher_name, department)  
+
+VALUES (2,'Mark','science') 
+
+INSERT INTO teacher (teacher_id, teacher_name, department)  
+
+VALUES (3,'Vincent', 'art')
+
+
+
+CREATE TABLE subjects (subject_id NUMBER , subject_name VARCHAR2(50), teacher_id NUMBER  
+
+) 
+
+
+
+INSERT INTO subjects (subject_id, subject_name, teacher_id)  
+
+VALUES (101,'algebra', 1);
+
+INSERT INTO subjects (subject_id, subject_name, teacher_id)  
+
+VALUES (102,'chemistry', 2);
+
+INSERT INTO subjects (subject_id, subject_name, teacher_id)  
+
+VALUES (103,'painting', 3);
+
+
+
+REFLECTION:Foreign keys and unique constraints work together to ensure data integrity within a relational database.
